@@ -1,23 +1,21 @@
 <!doctype html>
 <html>
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Movie Information Portal</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/movies.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
   </head>
 
   <body>
     <header>
-      <div>
+      <div class="logo">
         <img height="60px" src="img/logo.png" alt="logo" />
-        Movie Information Portal
       </div>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="movies.html">Movies</a>
-      </nav>
-    </header>
-    <main>
       <form class="search">
         <input type="text" placeholder="Search movie" />
+        <input type="submit" value="go" />
         <select>
           <option selected disabled>Genre</option>
           <option value="Action">Action</option>
@@ -26,80 +24,71 @@
           <option value="Drama">Drama</option>
           <option value="Horror">Horror</option>
         </select>
-        <input type="submit" value="go" />
       </form>
-      <hr />
-
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+      </nav>
+    </header>
+    <main>
       <div class="movie-cards">
-        <div class="card" style="display: inline-block">
+        <div class="card">
           <img
-            height="300px"
             src="img/godfather_2.jpeg"
             alt="the_godfather_2"
             class="card-poster"
           />
-          <br />
-          <span>The Godfather Part II</span>
-          <span>(1974)</span>
-          <br />
-          <span>Genre: Crime/Drama</span>
-          <br />
-          <span>Rating: 9/10</span>
-          <br />
-          <p style="width: 250px; font-size: smaller">
+          <span class="title">The Godfather Part II</span>
+          <span class="year">(1974)</span>
+          <span class="genre">Genre: Crime/Drama</span>
+          <span class="rating">Rating: 9/10</span>
+          <p class="description">
             Vito's popularity in the underworld is on the rise, while his son,
             Michael's career is swinging downwards. In order to redeem himself,
-            Michael must fight his enemies, including his own brother.
           </p>
-          <button>View Details</button>
+          <button class="view-details">View Details</button>
         </div>
 
-        <div class="card" style="display: inline-block">
+        <div class="card">
           <img
-            height="300px"
             src="img/ford_vs_farari.jpg"
             alt="ford_vs_farari"
             class="card-poster"
           />
-          <br />
-          <span>Ford v Ferrari</span>
-          <span>(2019)</span>
-          <br />
-          <span>Genre: Sport/Action</span>
-          <br />
-          <span>Rating: 8.1/10</span>
-          <br />
-          <p style="width: 250px; font-size: smaller">
+          <span class="title">Ford v Ferrari</span>
+          <span class="year">(2019)</span>
+          <span class="genre">Genre: Sport/Action</span>
+          <span class="rating">Rating: 8.1/10</span>
+          <p class="description">
             Carroll Shelby, an automotive designer, and Ken Miles, a race car
             driver, join hands to build a trailblazing vehicle and compete
             against the Ferrari race cars.
           </p>
-          <button>View Details</button>
+          <button class="view-details">View Details</button>
         </div>
 
-        <div class="card" style="display: inline-block">
+        <div class="card">
           <img
-            height="300px"
             src="img/the_machinist.jpeg"
             alt="the_machinist"
             class="card-poster"
           />
-          <br />
-          <span> The Machinist </span>
-          <span>(2004)</span>
-          <br />
-          <span>Genre: Thriller/Mystery</span>
-          <br />
-          <span>Rating: 7.6/10</span>
-          <br />
-          <p style="width: 250px; font-size: smaller">
+          <span class="title"> The Machinist </span>
+          <span class="year">(2004)</span>
+          <span class="genre">Genre: Thriller/Mystery</span>
+          <span class="rating">Rating: 7.6/10</span>
+          <p class="description">
             Trevor, an insomniac lathe operator who has not slept for months,
             experiences unusual occurrences at work and home. A strange man
             follows him everywhere, but no one else seems to notice him.
           </p>
-          <button>View Details</button>
+          <button class="view-details">View Details</button>
         </div>
       </div>
     </main>
+    <footer>
+      <span>&copy; 2026 Movie Portal</span> | <span>Links</span> |
+      <span>Contact Info</span>
+    </footer>
   </body>
 </html>

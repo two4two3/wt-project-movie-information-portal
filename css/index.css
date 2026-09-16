@@ -1,0 +1,61 @@
+.banner {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+}
+
+.banner img {
+    border-radius: 10px;
+    height: 400px;
+}
+
+h3 {
+    padding: 0 1.5rem;
+    padding-top: 1rem;
+    border-top: solid 1px gray;
+}
+
+.featured {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.featured img {
+    margin: 0 0.5rem;
+    max-height: 300px;
+    border: solid 1px gray;
+    border-radius: 5%;
+}
+
+.popular {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+
+.popular img {
+    margin: 0 0.5rem;
+    max-height: 300px;
+    border: solid 1px gray;
+    border-radius: 5%;
+}
+
+.genres {
+    display: flex;
+    width: 100%;
+    padding: 1rem;
+}
+
+.genres ul {
+    padding: 1rem;
+}
+
+.genres a {
+    text-decoration: none;
+    color: whitesmoke;
+}

@@ -1,0 +1,108 @@
+.search {
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    color: whitesmoke;
+}
+
+.search input[type="text"] {
+    background-color: #222222;
+    color: gray;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.search input[type="submit"] {
+    background-color: red;
+    color: whitesmoke;
+    border: none;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    border-radius: 5px;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.search input[type="text"]:focus {
+    outline: none;
+    border-color: none;
+}
+
+.search select {
+    background-color: red;
+    color: whitesmoke;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 5px;
+}
+
+.main {
+    display: flex;
+    justify-items: center;
+}
+
+.movie-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem 0;
+}
+
+.card {
+    border: solid 1px gray;
+    border-radius: 10px;
+    max-width: 250px;
+    margin: 0 0.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+
+}
+
+.card img {
+    max-height: 300px;
+    border-radius: 10px;
+}
+
+.card .title {
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: x-large;
+    padding: 0.5rem 0 0 0.5rem;
+}
+
+.card .year {
+    font-size: small;
+    padding: 0 0.5rem;
+}
+
+.card .genre {
+    padding: 0 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.card .rating {
+    padding: 0 0.5rem;
+    padding-top: 0.5rem;
+}
+
+.card .description {
+    font-style: italic;
+    padding: 0 0.5rem;
+    padding-top: 0.5rem;
+    width: 250px;
+    max-height: 65px;
+    overflow: hidden;
+    font-size: smaller;
+}
+
+.card .view-details {
+    padding: 0.4rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
