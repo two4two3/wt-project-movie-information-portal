@@ -1,17 +1,5 @@
-async function loadMovies() {
-    const response = await fetch('movies.json');
-    if (!response.ok) throw new Error('Network response was not ok');
-    return await response.json();
-}
+import { loadMovies, getAllGenres, removeLoading } from "./helper.js"
 
-function removeLoading() {
-    let loadingAll = document.querySelectorAll(".loading")
-    const elementsArray = Array.from(loadingAll);
-    elementsArray.forEach((e) => {
-        e.style.display = "none";
-    })
-    console.log(elementsArray)
-}
 function renderFeaturedMovies(featuredMovies = []) {
     let featuredContainer = document.querySelector(".featured");
     console.log(featuredMovies);
@@ -43,10 +31,10 @@ function renderGenres(moviesGenres = []) {
     })
 }
 
-function main(moviesData = []) {
+function main(moviesData) {
     renderFeaturedMovies(moviesData.movies.filter((element) => [4, 1, 3, 2].includes(element.id)));
     renderPopularMovies(moviesData.movies.filter((element) => [5, 6, 7].includes(element.id)));
-    renderGenres([...new Set(moviesData.movies.flatMap(movie => movie.genre))]);
+    renderGenres(getAllGenres(moviesData.movies));
 }
 
 loadMovies()

@@ -7,7 +7,7 @@
             "genre":["Crime","Drama"],
             "rating":9,
             "description":"Vito's popularity in the underworld is on the rise, while his son, Michael's career is swinging downwards. In order to redeem himself.",
-            "path":"img/godfather_2.jpeg"
+            "path":"godfather_2.jpeg"
         },
         {
             "id":2,
@@ -16,7 +16,7 @@
             "genre":["Sport","Action"],
             "rating":8.1,
             "description":"Carroll Shelby, an automotive designer, and Ken Miles, a race car driver, join hands to build a trailblazing vehicle and compete against the Ferrari race cars.",
-            "path":"img/ford_vs_farari.jpg"
+            "path":"ford_vs_farari.jpg"
         },
         {
             "id":3,
@@ -25,7 +25,7 @@
             "genre":["Thriller","Mystery"],
             "rating":7.6,
             "description":"Trevor, an insomniac lathe operator who has not slept for months, experiences unusual occurrences at work and home. A strange man follows him everywhere, but no one else seems to notice him.",
-            "path":"img/the_machinist.jpeg"
+            "path":"the_machinist.jpeg"
         },
         {
             "id":4,
@@ -34,7 +34,7 @@
             "genre":["Drama","Romance","War"],
             "rating":7.8,
             "description":"A young writer's false accusation changes the lives of her sister and the man she loves, with the consequences following them through war and separation.",
-            "path":"img/atonment.jpg"
+            "path":"atonment.jpg"
         },
         {
             "id":5,
@@ -43,7 +43,7 @@
             "genre":["Action","Adventure","Fantasy"],
             "rating":8.4,
             "description":"Odysseus, king of Ithaca, embarks on a perilous journey home after the Trojan War, facing dangerous obstacles and mythical creatures along the way.",
-            "path":"img/the_odyssey.jpeg"
+            "path":"the_odyssey.jpeg"
         },
         {
             "id":6,
@@ -52,7 +52,7 @@
             "genre":["Action","Adventure","Fantasy"],
             "rating":7.9,
             "description":"Peter Parker fights crime full-time as Spider-Man in a world that no longer remembers him, while a mysterious new threat emerges in the city.",
-            "path":"img/spiderman_brand_new_day.jpeg"
+            "path":"spiderman_brand_new_day.jpeg"
         },
         {
             "id":7,
@@ -61,7 +61,7 @@
             "genre":["Horror","Comedy"],
             "rating":7.8,
             "description":"A hopeless romantic makes a magical wish that takes an unexpected turn, leading to a chaotic series of events.",
-            "path":"img/obsession.jpeg"
+            "path":"obsession.jpeg"
         },
         {
             "id":8,

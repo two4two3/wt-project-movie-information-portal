@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/movies.css" />
     <link rel="icon" type="image/x-icon" href="favicon.png" />
+    <script src="js/movies.js" type="module"></script>
+    <script src="js/helper.js" type="module"></script>
   </head>
 
   <body>
@@ -18,13 +20,8 @@
         <input type="text" placeholder="Search movie" />
         <input type="submit" value="go" />
 
-        <select>
+        <select id="searchSelect">
           <option selected disabled>Genre</option>
-          <option value="Action">Action</option>
-          <option value="Thriller">Thriller</option>
-          <option value="Sci-Fi">Sci-Fi</option>
-          <option value="Drama">Drama</option>
-          <option value="Horror">Horror</option>
         </select>
       </form>
 
@@ -40,121 +37,7 @@
 
     <main>
       <div class="movie-cards">
-        <div class="card">
-          <img
-            src="img/godfather_2.jpeg"
-            alt="the_godfather_2"
-            class="card-poster"
-          />
-          <span class="title">The Godfather Part II</span>
-          <span class="year">(1974)</span>
-          <span class="genre">Genre: Crime/Drama</span>
-          <span class="rating">Rating: 9/10</span>
-          <p class="description">
-            Vito's popularity in the underworld is on the rise, while his son,
-            Michael's career is swinging downwards. In order to redeem himself,
-          </p>
-          <a class="view-details" href="details.html">View Details</a>
-        </div>
-
-        <div class="card">
-          <img
-            src="img/ford_vs_farari.jpg"
-            alt="ford_vs_farari"
-            class="card-poster"
-          />
-          <span class="title">Ford v Ferrari</span>
-          <span class="year">(2019)</span>
-          <span class="genre">Genre: Sport/Action</span>
-          <span class="rating">Rating: 8.1/10</span>
-          <p class="description">
-            Carroll Shelby, an automotive designer, and Ken Miles, a race car
-            driver, join hands to build a trailblazing vehicle and compete
-            against the Ferrari race cars.
-          </p>
-          <a class="view-details" href="details.html">View Details</a>
-        </div>
-
-        <div class="card">
-          <img
-            src="img/the_machinist.jpeg"
-            alt="the_machinist"
-            class="card-poster"
-          />
-          <span class="title">The Machinist</span>
-          <span class="year">(2004)</span>
-          <span class="genre">Genre: Thriller/Mystery</span>
-          <span class="rating">Rating: 7.6/10</span>
-          <p class="description">
-            Trevor, an insomniac lathe operator who has not slept for months,
-            experiences unusual occurrences at work and home. A strange man
-            follows him everywhere, but no one else seems to notice him.
-          </p>
-          <a class="view-details" href="details.html">View Details</a>
-        </div>
-
-        <div class="card">
-          <img src="img/atonment.jpg" alt="atonement" class="card-poster" />
-          <span class="title">Atonement</span>
-          <span class="year">(2007)</span>
-          <span class="genre">Genre: Drama/Romance/War</span>
-          <span class="rating">Rating: 7.8/10</span>
-          <p class="description">
-            A young writer's false accusation changes the lives of her sister
-            and the man she loves, with the consequences following them through
-            war and separation.
-          </p>
-          <a class="view-details" href="details.html">View Details</a>
-        </div>
-
-        <div class="card">
-          <img
-            src="img/the_odyssey.jpeg"
-            alt="the_odyssey"
-            class="card-poster"
-          />
-          <span class="title">The Odyssey</span>
-          <span class="year">(2026)</span>
-          <span class="genre">Genre: Action/Adventure/Fantasy</span>
-          <span class="rating">Rating: —</span>
-          <p class="description">
-            Odysseus, king of Ithaca, embarks on a perilous journey home after
-            the Trojan War, facing dangerous obstacles and mythical creatures
-            along the way.
-          </p>
-          <a class="view-details" href="details.html">View Details</a>
-        </div>
-
-        <div class="card">
-          <img
-            src="img/spiderman_brand_new_day.jpeg"
-            alt="spiderman_brand_new_day"
-            class="card-poster"
-          />
-          <span class="title">Spider-Man: Brand New Day</span>
-          <span class="year">(2026)</span>
-          <span class="genre">Genre: Action/Adventure/Fantasy</span>
-          <span class="rating">Rating: —</span>
-          <p class="description">
-            Peter Parker fights crime full-time as Spider-Man in a world that no
-            longer remembers him, while a mysterious new threat emerges in the
-            city.
-          </p>
-          <a class="view-details" href="details.html">View Details</a>
-        </div>
-
-        <div class="card">
-          <img src="img/obsession.jpeg" alt="obsession" class="card-poster" />
-          <span class="title">Obsession</span>
-          <span class="year">(2026)</span>
-          <span class="genre">Genre: Horror/Comedy</span>
-          <span class="rating">Rating: —</span>
-          <p class="description">
-            A hopeless romantic makes a magical wish that takes an unexpected
-            turn, leading to a chaotic series of events.
-          </p>
-          <a class="view-details" href="details.html">View Details</a>
-        </div>
+        <span class="loading">Loading...</span>
       </div>
     </main>
 
