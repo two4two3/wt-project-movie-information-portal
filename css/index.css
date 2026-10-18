@@ -49,18 +49,23 @@ h3 {
 
 .genres {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 25px;
     width: 100%;
-    padding: 1rem;
+    padding: 1.4rem;
 }
 
-.genres ul {
-    padding: 1rem;
-}
-
-.genres a {
-    text-decoration: none;
+.genres button {
+    background-color: #121212;
     color: whitesmoke;
+    padding: 0.5rem;
+    border: 0;
+    border-radius: 15%;
+    box-shadow: 0 0 5px red;
 }
+
 
 @media (max-width: 700px) {
     .banner img {
