@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reviews - Movie Information Portal</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/reviews.css" />
+    <link rel="icon" type="image/x-icon" href="favicon.png" />
+  </head>
+
+  <body>
+    <header>
+      <div class="logo">
+        <img height="60px" src="img/logo.png" alt="logo" />
+      </div>
+
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="movies.html">Movies</a>
+        <a href="details.html">Details</a>
+        <a href="favorites.html">Favorites</a>
+        <a href="reviews.html">Reviews</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="page-content">
+        <h1>Movie Reviews</h1>
+
+        <div class="review-form">
+          <h2>Write a Review</h2>
+
+          <form>
+            <label for="movie">Movie</label>
+            <select id="movie" name="movie">
+              <option>The Godfather Part II</option>
+              <option>Ford v Ferrari</option>
+              <option>The Machinist</option>
+              <option>Atonement</option>
+            </select>
+
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Your name" />
+
+            <label for="rating">Rating</label>
+            <select id="rating" name="rating">
+              <option value="9">9/10</option>
+              <option value="4">4/5</option>
+              <option value="3">3/5</option>
+              <option value="2">2/5</option>
+              <option value="1">1/5</option>
+            </select>
+
+            <label for="review">Review</label>
+            <textarea
+              id="review"
+              name="review"
+              rows="6"
+              placeholder="Write your review"
+            ></textarea>
+
+            <input type="submit" value="Submit Review" />
+          </form>
+        </div>
+
+        <div class="existing-review">
+          <h2>The Godfather Part II</h2>
+          <p class="review-rating">Rating: 5/5</p>
+          <p>
+            A powerful crime drama with excellent performances and storytelling.
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>&copy; 2026 Movie Portal</span>
+      <span>Links</span>
+      <span>Contact Info</span>
+    </footer>
+  </body>
+</html>

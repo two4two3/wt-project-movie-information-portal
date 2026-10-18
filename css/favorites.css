@@ -1,0 +1,64 @@
+.page-content {
+    max-width: 900px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.page-content h1 {
+    border-bottom: solid 1px gray;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.favorite-card {
+    display: flex;
+    gap: 1.5rem;
+    border: solid 1px gray;
+    border-radius: 10px;
+    padding: 1rem;
+}
+
+.favorite-card img {
+    width: 200px;
+    border-radius: 10px;
+}
+
+.favorite-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+}
+
+.favorite-info a {
+    width: fit-content;
+    color: whitesmoke;
+    background-color: red;
+    text-decoration: none;
+    padding: 0.6rem 1rem;
+    border-radius: 5px;
+}
+
+@media (max-width: 700px) {
+    .page-content {
+        margin: 1rem;
+    }
+
+    .favorite-card {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .favorite-card img {
+        width: 200px;
+        max-width: 100%;
+    }
+
+    .favorite-info {
+        width: 100%;
+    }
+
+    .favorite-info a {
+        width: 100%;
+        text-align: center;
+    }
+}

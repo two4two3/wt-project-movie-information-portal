@@ -1,0 +1,71 @@
+.page-content {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+}
+
+.page-content h1 {
+    border-bottom: solid 1px gray;
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.review-form,
+.existing-review {
+    border: solid 1px gray;
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.review-form h2,
+.existing-review h2 {
+    margin-bottom: 1rem;
+}
+
+.review-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.review-form label {
+    margin-top: 0.8rem;
+    margin-bottom: 0.3rem;
+}
+
+.review-form input,
+.review-form select,
+.review-form textarea {
+    background-color: #222222;
+    color: whitesmoke;
+    border: solid 1px gray;
+    border-radius: 5px;
+    padding: 0.7rem;
+    font-family: inherit;
+}
+
+.review-form textarea {
+    resize: vertical;
+}
+
+.review-form input[type="submit"] {
+    background-color: red;
+    border: none;
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.review-rating {
+    margin-bottom: 0.7rem;
+}
+
+@media (max-width: 700px) {
+    .page-content {
+        margin: 1rem;
+    }
+
+    .review-form,
+    .existing-review {
+        padding: 1rem;
+    }
+}

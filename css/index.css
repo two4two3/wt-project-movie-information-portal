@@ -7,6 +7,8 @@
 .banner img {
     border-radius: 10px;
     height: 400px;
+    max-width: 100%;
+    object-fit: cover;
 }
 
 h3 {
@@ -20,7 +22,7 @@ h3 {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .featured img {
@@ -35,7 +37,7 @@ h3 {
     display: flex;
     justify-content: space-around;
     flex-wrap: nowrap;
-    overflow: scroll;
+    overflow: auto;
 }
 
 .popular img {
@@ -58,4 +60,20 @@ h3 {
 .genres a {
     text-decoration: none;
     color: whitesmoke;
+}
+
+@media (max-width: 700px) {
+    .banner img {
+        height: auto;
+        width: 100%;
+    }
+
+    h3 {
+        padding-left: 1rem;
+    }
+
+    .featured img,
+    .popular img {
+        max-height: 220px;
+    }
 }
