@@ -1,0 +1,139 @@
+{
+    "movies":[
+        {
+            "id":1,
+            "title":"The Godfather Part II",
+            "year":1974,
+            "genre":["Crime","Drama"],
+            "rating":9,
+            "description":"Vito's popularity in the underworld is on the rise, while his son, Michael's career is swinging downwards. In order to redeem himself.",
+            "path":"img/godfather_2.jpeg"
+        },
+        {
+            "id":2,
+            "title":"Ford v Ferrari",
+            "year":2019,
+            "genre":["Sport","Action"],
+            "rating":8.1,
+            "description":"Carroll Shelby, an automotive designer, and Ken Miles, a race car driver, join hands to build a trailblazing vehicle and compete against the Ferrari race cars.",
+            "path":"img/ford_vs_farari.jpg"
+        },
+        {
+            "id":3,
+            "title":"The Machinist",
+            "year":2004,
+            "genre":["Thriller","Mystery"],
+            "rating":7.6,
+            "description":"Trevor, an insomniac lathe operator who has not slept for months, experiences unusual occurrences at work and home. A strange man follows him everywhere, but no one else seems to notice him.",
+            "path":"img/the_machinist.jpeg"
+        },
+        {
+            "id":4,
+            "title":"Atonement",
+            "year":2007,
+            "genre":["Drama","Romance","War"],
+            "rating":7.8,
+            "description":"A young writer's false accusation changes the lives of her sister and the man she loves, with the consequences following them through war and separation.",
+            "path":"img/atonment.jpg"
+        },
+        {
+            "id":5,
+            "title":"The Odyssey",
+            "year":2026,
+            "genre":["Action","Adventure","Fantasy"],
+            "rating":8.4,
+            "description":"Odysseus, king of Ithaca, embarks on a perilous journey home after the Trojan War, facing dangerous obstacles and mythical creatures along the way.",
+            "path":"img/the_odyssey.jpeg"
+        },
+        {
+            "id":6,
+            "title":"Spider-Man: Brand New Day",
+            "year":2026,
+            "genre":["Action","Adventure","Fantasy"],
+            "rating":7.9,
+            "description":"Peter Parker fights crime full-time as Spider-Man in a world that no longer remembers him, while a mysterious new threat emerges in the city.",
+            "path":"img/spiderman_brand_new_day.jpeg"
+        },
+        {
+            "id":7,
+            "title":"Obsession",
+            "year":2025,
+            "genre":["Horror","Comedy"],
+            "rating":7.8,
+            "description":"A hopeless romantic makes a magical wish that takes an unexpected turn, leading to a chaotic series of events.",
+            "path":"img/obsession.jpeg"
+        },
+        {
+            "id":8,
+            "title":"Horrible Bosses",
+            "year":2011,
+            "genre":["Comedy","Crime"],
+            "rating":6.9,
+            "description":"Nick, Dale and Kurt have personal grudges against their bosses. After a night of drunken revelry, they decide to hire a hitman and assassinate their bosses but things do not go as planned.",
+            "path":"horrible_bosses.jpeg"
+        },
+        {
+            "id":9,
+            "title":"How to Lose a Guy in 10 Days",
+            "year":2003,
+            "genre":["Comedy","Romance"],
+            "rating":6.6,
+            "description":"Benjamin is challenged by his co-workers to make a woman fall in love with him. On the other hand, Andie has to write an article on how to lose a guy in 10 days. Will they complete their given tasks?",
+            "path":"how_to_loose_a_guy_in_10_days.jpeg"
+        },
+        {
+            "id":10,
+            "title":"Scarface",
+            "year":1983,
+            "genre":["Crime","Action"],
+            "rating":8.3,
+            "description":"Tony Montana and his close friend Manny, build a strong drug empire in Miami. However as his power begins to grow, so does his ego and his enemies, and his own paranoia begins to plague his empire.",
+            "path":"scarface.jpeg"
+        },
+        {
+            "id":11,
+            "title":"No Smoking",
+            "year":2007,
+            "genre":["Thriller","Mystery"],
+            "rating":7.3,
+            "description":"K, a chain-smoker, visits a rehabilitation centre to quit smoking. He is released after he signs a cheque for 21 lakh rupees and is warned that his family will be killed if he dares to smoke again.",
+            "path":"no_smoking.jpg"
+        },
+        {
+            "id":12,
+            "title":"f1",
+            "year":2025,
+            "genre":["Drama","Action"],
+            "rating":7.6,
+            "description":"Racing legend Sonny Hayes is coaxed out of retirement to lead a struggling Formula 1 team—and mentor a young hotshot driver—while chasing one more chance at glory.",
+            "path":"f1_the_movie.jpg"
+        },
+        {
+            "id":13,
+            "title":"The Wolf of Wall Street",
+            "year":2013,
+            "genre":["Comedy","Drama","Crime"],
+            "rating":8.2,
+            "description":"A New York stockbroker refuses to cooperate in a large securities fraud case involving corruption on Wall Street, corporate banking world and mob infiltration. Based on Jordan Belfort’s autobiography.",
+            "path":"wolf_of_the_wall_street.jpg"
+        },
+        {
+            "id":14,
+            "title":"Babylon",
+            "year":2022,
+            "genre":["Comedy","Drama"],
+            "rating":7.1,
+            "description":"A tale of outsized ambition and outrageous excess, tracing the rise and fall of multiple characters in an era of unbridled decadence and depravity during Hollywood’s transition from silent films to sound films in the late 1920s.",
+            "path":"babylon.webp"
+        },
+        {
+            "id":15,
+            "title":"The Dictator",
+            "year":2012,
+            "genre":["Comedy"],
+            "rating":6.5,
+            "description":"The heroic story of a dictator who risks his life to ensure that democracy would never come to the country he so lovingly oppressed.",
+            "path":"the_dictator.jpg"
+        }
+    ]
+}
