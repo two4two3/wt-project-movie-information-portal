@@ -53,12 +53,12 @@
 .card {
     border: solid 1px gray;
     border-radius: 10px;
-    max-width: 250px;
     margin: 0 0.5rem;
     margin-bottom: 1rem;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
+    max-width: 225px;
 }
 
 .card img {

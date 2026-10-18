@@ -39,9 +39,9 @@ function renderAllMovies(movies = []) {
         let rating = document.createElement("span")
         rating.className = "rating"
         rating.innerText = movie.rating + "/10"
-        let description = document.createElement("p")
-        description.className = "description"
-        description.innerText = movie.description
+        // let description = document.createElement("p")
+        // description.className = "description"
+        // description.innerText = movie.description
         let anchor = document.createElement("a")
         anchor.className = "view-details"
         anchor.innerText = "View Details"
@@ -52,16 +52,26 @@ function renderAllMovies(movies = []) {
         movieCard.appendChild(year)
         movieCard.appendChild(genre)
         movieCard.appendChild(rating)
-        movieCard.appendChild(description)
+        // movieCard.appendChild(description)
         movieCard.appendChild(anchor)
 
         movieCardsContainer.appendChild(movieCard)
     })
 }
 
+function searchMovies(title, genre) {
+    console.log(title, genre)
+}
+
+
 function main(movies = []) {
     renderAllGenresOption(getAllGenres(movies));
     renderAllMovies(movies)
+    document.querySelector(".search").addEventListener("submit", (e) => {
+        e.preventDefault();
+        console.log(e.target)
+        searchMovies(e.target[0].value, e.target[2].value);
+    })
 }
 
 loadMovies()

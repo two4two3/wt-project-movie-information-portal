@@ -5,7 +5,7 @@ function renderFeaturedMovies(featuredMovies = []) {
     console.log(featuredMovies);
     featuredMovies.forEach((el) => {
         let img = document.createElement("img")
-        img.src = el.path;
+        img.src = "/img/" + el.path;
         img.alt = el.title;
         featuredContainer.appendChild(img);
     })
@@ -15,7 +15,7 @@ function renderPopularMovies(popularMovies = []) {
     console.log(popularMovies);
     popularMovies.forEach((el) => {
         let img = document.createElement("img")
-        img.src = el.path;
+        img.src = "/img/" + el.path;
         img.alt = el.title;
         popularContainer.appendChild(img);
     })
