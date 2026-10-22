@@ -1,7 +1,8 @@
 import {
     loadMovies,
     getAllGenres,
-    removeLoading
+    removeLoading,
+    getParamFromUrl
 } from "./helper.js";
 
 function renderAllGenresOption(genres = []) {
@@ -66,12 +67,26 @@ function searchMovies(title, genre) {
 
 function main(movies = []) {
     renderAllGenresOption(getAllGenres(movies));
-    renderAllMovies(movies)
-    document.querySelector(".search").addEventListener("submit", (e) => {
-        e.preventDefault();
-        console.log(e.target)
-        searchMovies(e.target[0].value, e.target[2].value);
-    })
+    let q = document.location.search
+    console.log(q)
+    if (q.includes("search-movie-title") && q.includes("search-movie-genre")) {
+        renderAllMovies(movies.filter(mv => {
+            if (mv.title.toLowerCase().includes(getParamFromUrl("search-movie-title").toLowerCase())
+                && mv.genre.includes(getParamFromUrl("search-movie-genre"))) {
+                return true
+            } else {
+                false
+            }
+        }))
+    } else if (q.includes("search-movie-title")) {
+        renderAllMovies(movies.filter(mv => {
+            if (mv.title.toLowerCase().includes(getParamFromUrl("search-movie-title").toLowerCase())) {
+                return true
+            }
+        }))
+    } else {
+        renderAllMovies(movies)
+    }
 }
 
 loadMovies()

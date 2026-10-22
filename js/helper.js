@@ -20,3 +20,7 @@ export function getAllGenres(movies = []) {
 export function getIdFromUrl() {
     return new URLSearchParams(document.location.search).get("id")
 }
+
+export function getParamFromUrl(key) {
+    return new URLSearchParams(document.location.search).get(key)
+}
