@@ -5,6 +5,51 @@ import {
     getParamFromUrl
 } from "./helper.js";
 
+function sortMovies(movies, sortBy) {
+    const sortedMovies = [...movies];
+
+    switch (sortBy) {
+        case "title-asc":
+            sortedMovies.sort((a, b) =>
+                a.title.localeCompare(b.title)
+            );
+            break;
+
+        case "title-desc":
+            sortedMovies.sort((a, b) =>
+                b.title.localeCompare(a.title)
+            );
+            break;
+
+        case "year-asc":
+            sortedMovies.sort((a, b) =>
+                Number(a.year) - Number(b.year)
+            );
+            break;
+
+        case "year-desc":
+            sortedMovies.sort((a, b) =>
+                Number(b.year) - Number(a.year)
+            );
+            break;
+
+        case "rating-asc":
+            sortedMovies.sort((a, b) =>
+                Number(a.rating) - Number(b.rating)
+            );
+            break;
+
+        case "rating-desc":
+            sortedMovies.sort((a, b) =>
+                Number(b.rating) - Number(a.rating)
+            );
+            break;
+    }
+
+    return sortedMovies;
+}
+
+
 function renderAllGenresOption(genres = []) {
     let searchForm = document.querySelector(".search")
     let searchSelect = searchForm[2]
@@ -16,7 +61,11 @@ function renderAllGenresOption(genres = []) {
     })
 }
 
-function renderAllMovies(movies = []) {
+function renderAllMovies(movies = [], sortby) {
+
+    if (sortby) {
+        movies = sortMovies(movies, sortby)
+    }
 
     let movieCardsContainer = document.querySelector(".movie-cards")
 
@@ -68,7 +117,8 @@ function searchMovies(title, genre) {
 function main(movies = []) {
     renderAllGenresOption(getAllGenres(movies));
     let q = document.location.search
-    console.log(q)
+    let sortby = getParamFromUrl("sort-movie")
+
     if (q.includes("search-movie-title") && q.includes("search-movie-genre")) {
         renderAllMovies(movies.filter(mv => {
             if (mv.title.toLowerCase().includes(getParamFromUrl("search-movie-title").toLowerCase())
@@ -77,15 +127,15 @@ function main(movies = []) {
             } else {
                 false
             }
-        }))
+        }), sortby)
     } else if (q.includes("search-movie-title")) {
         renderAllMovies(movies.filter(mv => {
             if (mv.title.toLowerCase().includes(getParamFromUrl("search-movie-title").toLowerCase())) {
                 return true
             }
-        }))
+        }), sortby)
     } else {
-        renderAllMovies(movies)
+        renderAllMovies(movies, sortby)
     }
 }
 
