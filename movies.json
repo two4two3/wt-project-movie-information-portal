@@ -134,6 +134,15 @@
             "rating":6.5,
             "description":"The heroic story of a dictator who risks his life to ensure that democracy would never come to the country he so lovingly oppressed.",
             "path":"the_dictator.jpg"
+        },
+        {
+            "id":16,
+            "title":"Fight Club",
+            "year":1999,
+            "genre":["Crime","Action"],
+            "rating":8.8,
+            "description":"Unhappy with his capitalistic lifestyle, a white-collared insomniac forms an underground fight club with Tyler, a careless soap salesman. Soon, their venture spirals down into something sinister.",
+            "path":"fight_club_mv.jpg"
         }
     ]
 }

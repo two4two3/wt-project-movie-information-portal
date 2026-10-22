@@ -1,8 +1,14 @@
+import {
+    loadMovies,
+    removeLoading,
+    getIdFromUrl
+} from "./helper.js";
 
-// <section class="movie-details">
 function loadMovieDetails(mId, movies = []) {
-    let movie = movies.filter((mv) => mv.id == mId)
-    let movieDetailsContainer = document.querySelector("movie-details")
+    let [movie] = movies.filter((mv) => mv.id == mId)
+    let movieDetailsContainer = document.querySelector(".movie-details")
+    // let movieDetailsContainer = document.createElement("section")
+    // movieDetailsContainer.className = "movie-details"
 
     let posterContainer = document.createElement("div")
     posterContainer.className = "details-poster"
@@ -87,39 +93,20 @@ function loadMovieDetails(mId, movies = []) {
     detailsContent.appendChild(buttonsContainer)
 
     // Append poster and content to main container
-    detailsContainer.appendChild(posterContainer)
-    detailsContainer.appendChild(detailsContent)
+    movieDetailsContainer.appendChild(posterContainer)
+    movieDetailsContainer.appendChild(detailsContent)
 
-    // Add the complete structure to the HTML page
-    document.body.appendChild(detailsContainer)
-    // <div class="details-poster">
-    //   <img src="img/godfather_2.jpeg" alt="The Godfather Part II poster" />
-    // </div>
-    // <div class="details-content">
-    //   <h1>The Godfather Part II</h1>
-    //
-    //   <p class="description">
-    //     The early life and career of Vito Corleone in 1920s New York is
-    //     portrayed while his son Michael expands and strengthens the family
-    //     crime business.
-    //   </p>
-    //
-    //   <div class="movie-info">
-    //     <p>Genre: Crime / Drama</p>
-    //     <p>Release Year: 1974</p>
-    //     <p>Language: English</p>
-    //     <p>Duration: 202 minutes</p>
-    //     <p>Director: Francis Ford Coppola</p>
-    //     <p>
-    //       Cast: Al Pacino, Robert De Niro, Robert Duvall, Diane Keaton, John
-    //       Cazale
-    //     </p>
-    //     <p>Rating: 9/10</p>
-    //   </div>
-    //
-    //   <div class="details-buttons">
-    //     <a href="favorites.html">Add to Favorites</a>
-    //     <a href="reviews.html">Write a Review</a>
-    //   </div>
 }
 
+
+function main(movies = []) {
+    let id = getIdFromUrl();
+    loadMovieDetails(id, movies)
+}
+
+loadMovies()
+    .then(movies_ => {
+        removeLoading()
+        main(movies_.movies)
+    })
+    .catch(error => { console.error('Error:', error) });

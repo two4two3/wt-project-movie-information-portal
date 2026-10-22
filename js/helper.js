@@ -16,3 +16,7 @@ export async function loadMovies() {
 export function getAllGenres(movies = []) {
     return [...new Set(movies.flatMap(movie => movie.genre))]
 }
+
+export function getIdFromUrl() {
+    return new URLSearchParams(document.location.search).get("id")
+}

@@ -77,6 +77,7 @@ function main(movies = []) {
 loadMovies()
     .then(movies_ => {
         // removeLoading();
+        console.log(movies_)
         removeLoading()
         main(movies_.movies)
     })
