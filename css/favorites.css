@@ -16,6 +16,7 @@
     border: solid 1px gray;
     border-radius: 10px;
     padding: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .favorite-card img {

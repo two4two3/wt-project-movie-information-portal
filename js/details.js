@@ -74,12 +74,13 @@ function loadMovieDetails(mId, movies = []) {
 
     // Create Add to Favorites link
     let favorites = document.createElement("a")
-    favorites.href = "favorites.html"
+    favorites.className = "add-to-fav"
+    favorites.href = `favorites.html?id=${movie.id}`
     favorites.innerText = "Add to Favorites"
 
     // Create Write a Review link
     let review = document.createElement("a")
-    review.href = "reviews.html"
+    review.href = `reviews.html?id=${movie.id}`
     review.innerText = "Write a Review"
 
     // Append links to buttons container
