@@ -25,9 +25,16 @@ function renderGenres(moviesGenres = []) {
     let genreContainer = document.querySelector(".genres");
     moviesGenres.forEach((el) => {
         let btn = document.createElement("button")
+        btn.className = btn.className + " genre-btn"
         btn.innerText = el
         btn.id = "genre" + el
         genreContainer.appendChild(btn);
+    })
+    let btns = document.querySelectorAll(".genre-btn")
+    btns.forEach(btn => {
+        btn.addEventListener("click", () => {
+            document.location.href = `movies.html?g=${btn.id.slice(5)}`
+        })
     })
 }
 
