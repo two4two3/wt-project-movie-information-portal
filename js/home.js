@@ -7,6 +7,7 @@ function renderFeaturedMovies(featuredMovies = []) {
         let img = document.createElement("img")
         img.src = "/img/" + el.path;
         img.alt = el.title;
+        img.id = el.id
         featuredContainer.appendChild(img);
     })
 }
@@ -16,6 +17,7 @@ function renderPopularMovies(popularMovies = []) {
     popularMovies.forEach((el) => {
         let img = document.createElement("img")
         img.src = "/img/" + el.path;
+        img.id = el.id
         img.alt = el.title;
         popularContainer.appendChild(img);
     })
@@ -33,7 +35,7 @@ function renderGenres(moviesGenres = []) {
     let btns = document.querySelectorAll(".genre-btn")
     btns.forEach(btn => {
         btn.addEventListener("click", () => {
-            document.location.href = `movies.html?g=${btn.id.slice(5)}`
+            document.location.href = `movies.html?search-movie-genre=${btn.id.slice(5)}&search-movie-title=`
         })
     })
 }
@@ -42,6 +44,12 @@ function main(moviesData) {
     renderFeaturedMovies(moviesData.movies.filter((element) => [4, 1, 3, 2].includes(element.id)));
     renderPopularMovies(moviesData.movies.filter((element) => [5, 6, 7].includes(element.id)));
     renderGenres(getAllGenres(moviesData.movies));
+
+    document.querySelectorAll("img").forEach(e => {
+        e.addEventListener("click", (ev) => {
+            document.location.href = `details.html?id=${ev.target.id}`
+        })
+    })
 }
 
 loadMovies()
