@@ -31,23 +31,29 @@
 
           <form>
             <label for="movie">Movie</label>
-            <select id="movie" name="movie">
-              <option>The Godfather Part II</option>
-              <option>Ford v Ferrari</option>
-              <option>The Machinist</option>
-              <option>Atonement</option>
-            </select>
+            <input
+              disabled
+              type="text"
+              id="movie"
+              name="movie"
+              placeholder="Movie name here."
+            />
 
             <label for="name">Your Name</label>
             <input type="text" id="name" name="name" placeholder="Your name" />
 
             <label for="rating">Rating</label>
             <select id="rating" name="rating">
+              <option selected value="10">10/10</option>
+              <option value="8">8/10</option>
               <option value="9">9/10</option>
-              <option value="4">4/5</option>
-              <option value="3">3/5</option>
-              <option value="2">2/5</option>
-              <option value="1">1/5</option>
+              <option value="7">7/10</option>
+              <option value="6">6/10</option>
+              <option value="5">5/10</option>
+              <option value="4">4/10</option>
+              <option value="3">3/10</option>
+              <option value="2">2/10</option>
+              <option value="1">1/10</option>
             </select>
 
             <label for="review">Review</label>
@@ -77,5 +83,7 @@
       <span>Links</span>
       <span>Contact Info</span>
     </footer>
+    <script src="js/helper.js" type="module"></script>
+    <script src="js/reviews.js" type="module"></script>
   </body>
 </html>
