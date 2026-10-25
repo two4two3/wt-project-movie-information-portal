@@ -18,9 +18,21 @@
     margin-bottom: 1.5rem;
 }
 
+.existing-review p {
+    margin-bottom: 5px;
+}
+
 .review-form h2,
 .existing-review h2 {
     margin-bottom: 1rem;
+}
+
+.review-uname {
+    position: relative;
+    float: right;
+    color: gray;
+    padding-bottom: 10px;
+    bottom: 5px;
 }
 
 .review-form form {
@@ -63,6 +75,13 @@
     border: none;
     margin-top: 1rem;
     cursor: pointer;
+}
+
+#error {
+    margin-top: 1rem;
+    color: #990000;
+    font-size: large;
+    text-shadow: 0 0 3px #004400;
 }
 
 .review-rating {
