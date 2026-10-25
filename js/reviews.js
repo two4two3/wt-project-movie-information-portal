@@ -137,6 +137,7 @@ function main(movies = []) {
 
 loadMovies()
     .then(movies_ => {
+        removeLoading()
         main(movies_.movies)
     })
     .catch(error => console.error('Error:', error));
