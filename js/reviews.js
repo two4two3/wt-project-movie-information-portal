@@ -86,7 +86,6 @@ function main(movies = []) {
             renderUserReviews();
         }
     } else {
-
         document.querySelector(".existing-review").style.display = "block"
         document.querySelector(".review-form").style.display = "none"
         renderUserReviews();
