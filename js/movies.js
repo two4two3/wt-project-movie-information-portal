@@ -63,6 +63,12 @@ function renderAllGenresOption(genres = []) {
 
 function renderAllMovies(movies = [], sortby) {
 
+    if (movies.length == 0) {
+        let movieCardsContainer = document.querySelector(".movie-cards")
+        movieCardsContainer.append("No movies Found")
+        return
+    }
+
     if (sortby) {
         movies = sortMovies(movies, sortby)
     }
@@ -89,9 +95,6 @@ function renderAllMovies(movies = [], sortby) {
         let rating = document.createElement("span")
         rating.className = "rating"
         rating.innerText = movie.rating + "/10"
-        // let description = document.createElement("p")
-        // description.className = "description"
-        // description.innerText = movie.description
         let anchor = document.createElement("a")
         anchor.className = "view-details"
         anchor.innerText = "View Details"
@@ -107,10 +110,6 @@ function renderAllMovies(movies = [], sortby) {
 
         movieCardsContainer.appendChild(movieCard)
     })
-}
-
-function searchMovies(title, genre) {
-    console.log(title, genre)
 }
 
 
@@ -141,8 +140,6 @@ function main(movies = []) {
 
 loadMovies()
     .then(movies_ => {
-        // removeLoading();
-        console.log(movies_)
         removeLoading()
         main(movies_.movies)
     })

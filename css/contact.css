@@ -48,6 +48,13 @@
     cursor: pointer;
 }
 
+.contact-form #error {
+    margin-top: 1rem;
+    color: #990000;
+    font-size: large;
+    text-shadow: 0 0 3px #004400;
+}
+
 @media (max-width: 700px) {
     .page-content {
         margin: 1rem;

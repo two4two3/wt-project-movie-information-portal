@@ -32,6 +32,9 @@ function renderMovieInfo([movie]) {
 
 function renderUserReviews() {
     let reviews = localStorage.getItem("reviews")
+    let extra = document.querySelectorAll(".existing-review")[0]
+    extra.style.display = "none"
+
     if (!reviews || !JSON.parse(reviews)) {
         document.querySelector(".page-content").append('No more Review')
     } else {
@@ -42,10 +45,7 @@ function renderUserReviews() {
         reviews.forEach(r => {
 
             //remove empty review
-            let extra = document.querySelectorAll(".existing-review")[0]
-            if (extra) {
-                extra.style.display = "none"
-            }
+            extra.style.display = "none"
 
             let existingReview = document.createElement("div")
             existingReview.className = "existing-review"
@@ -95,19 +95,43 @@ function main(movies = []) {
     document.forms[0].addEventListener("submit", (e => {
         // validation remains
         e.preventDefault();
+
         let mname = e.target["movie"].value
         let name = e.target["name"].value
         let rating = e.target["rating"].value
         let review = e.target["review"].value
 
-        let userReview = {
-            title: mname,
-            name: name,
-            rating: rating,
-            review: review
+        let validationErrors = []
+        if (name.length < 3 || name.length > 20) {
+            validationErrors.push({ field: "name", message: "Name should be minimum 3 characters or maximum 20 characters long" })
         }
-        addReview(userReview)
-        document.location.href = "reviews.html"
+        if (+rating < 1 || +rating > 10) {
+            validationErrors.push({ field: "rating", message: "Rating should be between 1-10" })
+        }
+        if (review.length < 20) {
+            validationErrors.push({ field: "review", message: "Your review should be minimum 20 characters long" })
+        }
+        let span = document.getElementById("error");
+        span.innerHTML = ""
+
+        console.log(validationErrors)
+        if (validationErrors.length > 0) {
+            span.style.display = "inline-block"
+            e.target[validationErrors[0].field].focus()
+            validationErrors.forEach(e => {
+                span.innerHTML = span.innerHTML + "- " + e.message + "<br>"
+            })
+        } else {
+
+            let userReview = {
+                title: mname,
+                name: name,
+                rating: rating,
+                review: review
+            }
+            addReview(userReview)
+            document.location.href = "reviews.html"
+        }
     }))
 }
 
