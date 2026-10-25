@@ -2,13 +2,13 @@
 function main() {
     document.forms[0].addEventListener("submit", (e => {
         e.preventDefault();
-
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         let validationErrors = []
         let name = e.target["name"].value
         let email = e.target["email"].value
         let subject = e.target["subject"].value
         let message = e.target["message"].value
+
         console.log(`\
             name:${name}
             email:${email}
